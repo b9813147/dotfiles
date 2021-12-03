@@ -15,7 +15,7 @@ nmap zra :action ReformatCode<CR>:action Run<CR>
 
 
 "ScrollOff 引數 可以令螢幕滾動時在游標上下方保留5行預覽程式碼（也就是游標會在第5行觸發向上滾動，或者在倒數第5行觸發向下滾動）。
-set so=5
+set so=0
 set clipboard=unnamed
 
 
