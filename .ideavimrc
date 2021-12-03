@@ -8,6 +8,8 @@ set incsearch
 set hlsearch
 " 同步剪貼簿
 imap jj <Esc> :action ReformatCode<CR>
+imap kk <Esc> :action ReformatCode<CR>
+imap jk <Esc> :action ReformatCode<CR>
 imap zra <Esc> :action ReformatCode<CR>:action Run<CR>
 nmap ml  :action ShowBookmarks<CR>
 nmap ma  :action ToggleBookmark<CR>
