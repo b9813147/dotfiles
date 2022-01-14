@@ -7,14 +7,13 @@ set ignorecase
 set incsearch
 set hlsearch
 " 同步剪貼簿
-imap jj <Esc> :action ReformatCode<CR>
-imap kk <Esc> :action ReformatCode<CR>
 imap jk <Esc> :action ReformatCode<CR>
-imap zra <Esc> :action ReformatCode<CR>:action Run<CR>
+imap zrr <Esc> :action ReformatCode<CR>:action Run<CR>
 nmap ml  :action ShowBookmarks<CR>
 nmap ma  :action ToggleBookmark<CR>
-nmap zra :action ReformatCode<CR>:action Run<CR>
+nmap zrr :action ReformatCode<CR>:action Run<CR>
 
+map zrp :action IntroduceParameter<CR><Esc>
 
 "ScrollOff 引數 可以令螢幕滾動時在游標上下方保留5行預覽程式碼（也就是游標會在第5行觸發向上滾動，或者在倒數第5行觸發向下滾動）。
 set so=0
