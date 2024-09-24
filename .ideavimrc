@@ -1,22 +1,33 @@
-nmap hh ^
+"nmap hh ^
 "vmap hh ^
-nmap ll $
+"nmap ll $
 "vmap ll $
 " search
 set ignorecase
 set incsearch
 set hlsearch
 " 同步剪貼簿
-imap jk <Esc> :action ReformatCode<CR>
-imap zrr <Esc> :action ReformatCode<CR>:action Run<CR>
-nmap ml  :action ShowBookmarks<CR>
-nmap ma  :action ToggleBookmark<CR>
-nmap zrr :action ReformatCode<CR>:action Run<CR>
+imap zrr <Esc> :action ReformatCode<CR>
+nmap zrr :action ReformatCode<CR>
+imap jj <Esc>
+"imap zrr <Esc> :action ReformatCode<CR>:action Run<CR>
+imap zra <Esc> :action Run<CR>
+nmap zra :action Run<CR>
 
-map zrp :action IntroduceParameter<CR><Esc>
+nmap zrl  :action ShowBookmarks<CR>
+"nmap zrb  :action ToggleBookmark<CR>
+nmap zrb  :action EditBookmarksGroup<CR>
+"nmap zrr :action ReformatCode<CR>:action Run<CR>
+
+"nmap zri <Esc> :action Inline<CR>
+nmap zrf <Esc> :action IntroduceField<CR>
+nmap zrp <Esc> :action IntroduceParameter<CR>
+nmap zrm <Esc> :action ExtractMethod<CR>
+nmap zrv <Esc> :action IntroduceVariable<CR>
+nmap zrc <Esc> :action IntroduceConstant<CR>
 
 "ScrollOff 引數 可以令螢幕滾動時在游標上下方保留5行預覽程式碼（也就是游標會在第5行觸發向上滾動，或者在倒數第5行觸發向下滾動）。
 set so=0
 set clipboard=unnamed
-
-
+" 進入編輯模式時自動切換為英文輸入法
+autocmd InsertEnter * silent !setxkbmap us
